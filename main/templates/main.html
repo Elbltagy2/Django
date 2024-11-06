@@ -1,9 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
   <title>{% block title %}{% endblock %}</title>
 </head>
+<link rel="stylesheet" href="{% static 'myfirst.css' %}">
 <body>
+    {% include "menu.html" with me="TOBIAS" sponsor="W3SCHOOLS" %}
 <h1>test</h1>
 {% block content %}
 {% endblock %}

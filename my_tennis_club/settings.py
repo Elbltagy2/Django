@@ -27,7 +27,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -48,6 +47,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'my_tennis_club.urls'
@@ -70,7 +70,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'my_tennis_club.wsgi.application'
 
-
+STATIC_ROOT = BASE_DIR / 'productionfiles'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
